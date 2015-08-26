@@ -7,7 +7,7 @@ import org.apache.commons.lang.RandomStringUtils
 class UrlService {
 
     def salvar(params){
-        String charset = (('A'..'Z') + ('0'..'9')).join()
+        String charset = (('0'..'9') + ('a'..'h') + ('j'..'k') + ('m'..'z') + ('A'..'H') + ('J'..'K') + ('M'..'Z')).join()
         Integer length = 7
         String randomString = RandomStringUtils.random(length, charset.toCharArray())
         log.debug(randomString)
